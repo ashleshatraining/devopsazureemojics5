@@ -13,8 +13,13 @@ stages:
            inputs:
              containerRegistry: 'serviceconncs5'
              repository: 'cs5registrycs'
-             command: 'buildAndPush'
+             command: 'build'
              Dockerfile: '**/Dockerfile'
+         - task: Docker@2
+           inputs:
+             containerRegistry: 'serviceconncs5'
+             repository: 'cs5registrycs'
+             command: 'push'
 
          - task: HelmInstaller@0
            inputs:
