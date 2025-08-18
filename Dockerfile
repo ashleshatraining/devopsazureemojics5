@@ -2,7 +2,7 @@ FROM buoyantio/emojivoto-svc-base:v12
 
 ARG svc_name
 
-COPY $svc_name/target/ /usr/local/bin/
+COPY . .
 
 # ARG variables arent available for ENTRYPOINT
 ENV SVC_NAME $svc_name

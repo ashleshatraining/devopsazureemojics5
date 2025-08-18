@@ -19,7 +19,7 @@ provider "azurerm" {
   subscription_id = "426b8104-3a89-42f0-a3f5-14b554b1b2bb"
   client_id       = "bf5e8e4f-3aea-40f9-bba6-0978ac70f104"
   tenant_id       = "09201aea-fd49-442b-9a0d-8de2389cefaf"
-  client_secret   = "var.secret"
+  client_secret   = "WtL8Q~2F1jhXJug7.42TcMEJInkXHZqhYZTfEdoR"
 }
 resource "azurerm_resource_group" "rg" {
   name     = var.rgname
