@@ -63,7 +63,7 @@ stages:
              command: 'upgrade'
              chartType: 'FilePath'
              chartPath: 'emoji voto/emojivoto'
-             releaseName: 'emojiapp'
+             releaseName: 'sampleproj'
              overrideValues: 'image.tag=$(Build.BuildId)'
 
         #  - task: HelmDeploy@0
