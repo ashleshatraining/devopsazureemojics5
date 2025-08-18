@@ -1,0 +1,5 @@
+rgname = "rg5cs"
+rglocation = "West US 2"
+acrname = "cs5registrycs"
+aksname = "aksclustercs5"
+aksdnsname = "aksdns1"
