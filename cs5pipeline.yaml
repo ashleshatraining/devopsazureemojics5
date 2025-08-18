@@ -62,7 +62,7 @@ stages:
              namespace: 'emojivoto'
              command: 'upgrade'
              chartType: 'FilePath'
-             chartPath: 'emoji voto/emoji'
+             chartPath: 'emojivoto/emoji'
              releaseName: 'emojiapp'
              overrideValues: 'image.tag=$(Build.BuildId)'
 
