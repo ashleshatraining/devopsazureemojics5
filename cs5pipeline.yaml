@@ -32,7 +32,7 @@ stages:
              azureResourceGroupForACR: 'rg5cs'
              azureContainerRegistry: 'cs5registrycs'
              command: 'package'
-             chartPath: 'emojivoto/emojivoto'     
+             chartPath: 'emoji voto/emojivoto'     
 
          - task: PublishBuildArtifacts@1
            inputs:
@@ -65,6 +65,6 @@ stages:
              namespace: 'emojivoto'
              command: 'upgrade'
              chartType: 'FilePath'
-             chartPath: 'emojivoto/emoji'
+             chartPath: 'emoji voto/emojivoto'
              releaseName: 'emojiapp'
              overrideValues: 'image.tag=$(Build.BuildId)'
