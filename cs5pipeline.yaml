@@ -55,16 +55,28 @@ stages:
            inputs:
              helmVersion: '2.14.1'
              installKubectl: true
-
-         - task: HelmDeploy@0
+         - task: HelmDeploy@1
            inputs:
-             connectionType: 'Azure Resource Manager'
-             azureSubscription: 'AZResourceconn'
-             azureResourceGroup: 'devopscs5'
-             kubernetesCluster: 'aksclustercs5'
+             connectionType: 'Kubernetes Service Connection'
+             kubernetesServiceConnection: 'azuredevopsakssc'
              namespace: 'emojivoto'
              command: 'upgrade'
              chartType: 'FilePath'
              chartPath: 'emoji voto/emojivoto'
              releaseName: 'emojiapp'
              overrideValues: 'image.tag=$(Build.BuildId)'
+
+        #  - task: HelmDeploy@0
+        #    inputs:
+        #      connectionType: 'Azure Resource Manager'
+        #      azureSubscription: 'AZResourceconn'
+        #      azureResourceGroup: 'devopscs5'
+        #      kubernetesCluster: 'aksclustercs5'
+        #      namespace: 'emojivoto'
+        #      command: 'upgrade'
+        #      chartType: 'FilePath'
+        #      chartPath: 'emoji voto/emojivoto'
+        #      releaseName: 'emojiapp'
+        #      overrideValues: 'image.tag=$(Build.BuildId)'
+     
+
