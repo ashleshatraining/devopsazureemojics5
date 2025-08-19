@@ -55,16 +55,17 @@ stages:
            inputs:
              helmVersion: '2.14.1'
              installKubectl: true
-         - task: HelmDeploy@1
-           inputs:
-             connectionType: 'Kubernetes Service Connection'
-             kubernetesServiceConnection: 'azuredevopsakssc'
-             namespace: 'emojivoto'
-             command: 'upgrade'
-             chartType: 'FilePath'
-             chartPath: 'emojivoto'
-             releaseName: 'emojiapp'
-             overrideValues: 'image.tag=$(Build.BuildId)'
+             
+        #  - task: HelmDeploy@1
+        #    inputs:
+        #      connectionType: 'Kubernetes Service Connection'
+        #      kubernetesServiceConnection: 'azuredevopsakssc'
+        #      namespace: 'emojivoto'
+        #      command: 'upgrade'
+        #      chartType: 'FilePath'
+        #      chartPath: 'emojivoto'
+        #      releaseName: 'emojiapp'
+        #      overrideValues: 'image.tag=$(Build.BuildId)'
 
         #  - task: HelmDeploy@0
         #    inputs:
